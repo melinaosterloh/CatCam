@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eh4-Fo-DBA">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="CatCam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTJ-r2-JFg">
+                                <rect key="frame" x="80" y="282" width="232" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Ov3-AS-oKL"/>
+                                </constraints>
+                                <string key="text">Willkommen bei 
+CatCam </string>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hallo!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaQ-l4-hBy">
+                                <rect key="frame" x="141" y="217" width="111" height="48"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pe-Il-bCB">
+                                <rect key="frame" x="41.666666666666657" y="571" width="310" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="1GB-gW-e1i"/>
+                                </constraints>
+                                <color key="tintColor" red="0.83809542660000003" green="0.71782392260000005" blue="0.60253405569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mit neuem CatCam Halsband koppeln">
+                                    <fontDescription key="titleFontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="12"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yUc-gh-JL9" kind="show" id="Dm0-Aj-9fu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZV-8l-nPr">
+                                <rect key="frame" x="41.666666666666657" y="637" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="310" id="iwe-qj-NqK"/>
+                                    <constraint firstAttribute="height" constant="30" id="m1p-MT-YhQ"/>
+                                </constraints>
+                                <color key="tintColor" red="0.83809542660000003" green="0.71782392260000005" blue="0.60253405569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Verbindung mit Halsband wiederherstellen">
+                                    <fontDescription key="titleFontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="12"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVK-4D-dbk">
+                                <rect key="frame" x="31.666666666666657" y="386" width="330" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="KhF-IU-yyt"/>
+                                    <constraint firstAttribute="height" constant="140" id="dCg-tY-gJR"/>
+                                </constraints>
+                                <string key="text">Möchtest du ein neues CatCam 
+Halsband koppeln oder die 
+Verbindung zu einem bereits 
+gekoppelten Halsband 
+wiederherstellen?</string>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qaQ-l4-hBy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="2Uz-IK-9wW"/>
+                            <constraint firstItem="FZV-8l-nPr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3Kn-Lt-Wyv"/>
+                            <constraint firstItem="0pe-Il-bCB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="57F-AO-hUF"/>
+                            <constraint firstItem="WVK-4D-dbk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="74l-aW-aPc"/>
+                            <constraint firstItem="WVK-4D-dbk" firstAttribute="top" secondItem="TTJ-r2-JFg" secondAttribute="bottom" constant="45" id="ISp-W9-kaN"/>
+                            <constraint firstItem="0pe-Il-bCB" firstAttribute="top" secondItem="WVK-4D-dbk" secondAttribute="bottom" constant="45" id="TA0-zo-OJY"/>
+                            <constraint firstItem="TTJ-r2-JFg" firstAttribute="centerX" secondItem="qaQ-l4-hBy" secondAttribute="centerX" id="TYl-Cb-LbJ"/>
+                            <constraint firstItem="WVK-4D-dbk" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="X6k-6w-58E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qaQ-l4-hBy" secondAttribute="bottom" constant="544" id="bab-87-6Sd"/>
+                            <constraint firstItem="TTJ-r2-JFg" firstAttribute="top" secondItem="qaQ-l4-hBy" secondAttribute="bottom" constant="8" id="d6a-SC-6Ei"/>
+                            <constraint firstItem="FZV-8l-nPr" firstAttribute="top" secondItem="0pe-Il-bCB" secondAttribute="bottom" constant="35" id="fUt-u4-1KR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FZV-8l-nPr" secondAttribute="bottom" constant="142" id="hzs-9l-pQz"/>
+                            <constraint firstItem="TTJ-r2-JFg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="jqb-xj-fDh"/>
+                            <constraint firstItem="qaQ-l4-hBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kmi-ze-K13"/>
+                            <constraint firstItem="qaQ-l4-hBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="sev-XY-hc8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="j8k-hC-gY3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988.54961832061065" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M3i-dD-4My">
+            <objects>
+                <viewController id="yUc-gh-JL9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIk-KF-4ck">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkg-d8-uaX">
+                                <rect key="frame" x="31" y="167" width="331" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="330" id="Lkd-7u-ctY"/>
+                                    <constraint firstAttribute="height" constant="140" id="mTA-NI-XnQ"/>
+                                </constraints>
+                                <string key="text">Stelle sicher, dass Bluetooth auf dem Gerät aktiviert ist.  Bitte drücke auf den Knopf hinterm GPS-Tag am Halsband, bis es blinkt. Wähle dein Halsband aus, wenn es unten in der Liste auftaucht.</string>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pne-Bt-6ct"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" red="0.83809542660000003" green="0.71782392260000005" blue="0.60253405569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wkg-d8-uaX" firstAttribute="centerX" secondItem="ZIk-KF-4ck" secondAttribute="centerX" id="Ex9-D1-TZP"/>
+                            <constraint firstItem="wkg-d8-uaX" firstAttribute="top" secondItem="Pne-Bt-6ct" secondAttribute="top" constant="64" id="Neg-Ld-fFR"/>
+                            <constraint firstItem="wkg-d8-uaX" firstAttribute="leading" secondItem="Pne-Bt-6ct" secondAttribute="leading" constant="31" id="VKo-Tu-Ai2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="25z-Vb-GoG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1rL-uM-P3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="988.54961832061065" y="760.56338028169023"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xFg-bG-gxG">
+            <objects>
+                <viewController id="Eh4-Fo-DBA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MfZ-1J-xgF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvA-MQ-Din">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nsh-HJ-Y0B">
+                                <rect key="frame" x="0.0" y="767" width="393" height="85"/>
+                                <subviews>
+                                    <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IUv-jU-6Kp">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <items>
+                                            <tabBarItem title="" image="point_beige" id="BYm-Qe-USi"/>
+                                            <tabBarItem title="" image="heart_schwarz" id="rhw-Xq-gS9"/>
+                                            <tabBarItem title="" image="settings_schwarz" id="RHG-TK-l7c"/>
+                                        </items>
+                                    </tabBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9694760442" green="0.96947616339999998" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Yz-cm-EH1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="CatCam" id="9dF-Jn-xgd"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="07c-LS-9KC"/>
+                        <color key="backgroundColor" red="0.9694760442" green="0.96947616339999998" blue="0.96947616339999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nsh-HJ-Y0B" firstAttribute="top" secondItem="MfZ-1J-xgF" secondAttribute="top" constant="767" id="19W-aL-SiM"/>
+                            <constraint firstItem="5Yz-cm-EH1" firstAttribute="trailing" secondItem="kvA-MQ-Din" secondAttribute="trailing" id="1l0-pP-HGx"/>
+                            <constraint firstItem="5Yz-cm-EH1" firstAttribute="trailing" secondItem="Nsh-HJ-Y0B" secondAttribute="trailing" id="6ye-b0-Rk0"/>
+                            <constraint firstItem="5Yz-cm-EH1" firstAttribute="leading" secondItem="MfZ-1J-xgF" secondAttribute="leading" id="85R-lZ-p5G"/>
+                            <constraint firstItem="5Yz-cm-EH1" firstAttribute="top" secondItem="07c-LS-9KC" secondAttribute="top" id="8c0-lN-Erc"/>
+                            <constraint firstItem="kvA-MQ-Din" firstAttribute="top" secondItem="5Yz-cm-EH1" secondAttribute="bottom" id="Kzk-nd-LFO"/>
+                            <constraint firstAttribute="trailing" secondItem="5Yz-cm-EH1" secondAttribute="trailing" id="YWX-VA-Prx"/>
+                            <constraint firstItem="kvA-MQ-Din" firstAttribute="bottom" secondItem="Nsh-HJ-Y0B" secondAttribute="bottom" id="fJ1-wK-aSR"/>
+                            <constraint firstAttribute="bottom" secondItem="kvA-MQ-Din" secondAttribute="bottom" id="ia6-am-HbB"/>
+                            <constraint firstItem="5Yz-cm-EH1" firstAttribute="leading" secondItem="Nsh-HJ-Y0B" secondAttribute="leading" id="pfY-Zb-Rnd"/>
+                            <constraint firstItem="5Yz-cm-EH1" firstAttribute="leading" secondItem="kvA-MQ-Din" secondAttribute="leading" id="uN6-CG-6ib"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hW-hh-niI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924.4274809160304" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gLq-ea-lmZ">
+            <objects>
+                <viewController id="I8l-ix-KvH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qvo-dM-1hq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="85q-CN-V4p">
+                                <rect key="frame" x="16" y="161" width="361" height="606"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tabBar clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h8n-5o-AQE">
+                                <rect key="frame" x="0.0" y="767" width="393" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="" image="point_schwarz" id="olm-TX-rdK"/>
+                                    <tabBarItem title="" image="heart_beige" id="l3Z-h6-Kqj"/>
+                                    <tabBarItem title="" image="settings_schwarz" id="FSP-ZT-ujL"/>
+                                </items>
+                            </tabBar>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-pR-PBo">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Aktivitäten" id="aeo-c6-Yhn"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Routen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hy1-XN-hIt">
+                                <rect key="frame" x="16" y="132" width="52" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2MN-ZT-XIE"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S6i-TN-l7F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2892.3664122137402" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j9R-vl-hqo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="djB-hK-Oks" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WKM-Ii-Sjq">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hWI-2Q-94f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94d-dc-9nA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jyX-5a-xOJ">
+            <objects>
+                <viewController id="2jb-Wd-NLD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zPu-72-jMS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0B-Qz-EO9">
+                                <rect key="frame" x="0.0" y="767" width="393" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="" image="point_schwarz" id="rNg-L2-Oy9"/>
+                                    <tabBarItem title="" image="heart_schwarz" id="OaH-M3-ULb"/>
+                                    <tabBarItem title="" image="settings_beige" id="TLT-Gz-Fxa"/>
+                                </items>
+                            </tabBar>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5k-Za-dgx">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Einstellungen" id="Gji-Cb-AAN"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XHx-Mb-vig">
+                                <rect key="frame" x="46.666666666666657" y="182" width="300" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xZ-P7-Pve">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Konto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXn-EC-DK0">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnd-Zd-2th">
+                                                <rect key="frame" x="250" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="YVf-GM-Apq"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="&gt;">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="AlN-SY-gw8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNh-4z-ooU">
+                                        <rect key="frame" x="0.0" y="50" width="300" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Systemeinstellungen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqS-vg-wye">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ojI-ey-flC">
+                                                <rect key="frame" x="250" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="gi9-gd-JVi"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="&gt;">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="vyQ-YB-XVQ"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KdD-7g-9ps">
+                                        <rect key="frame" x="0.0" y="100" width="300" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benachrichtigungen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT8-uT-HDP">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSr-Bg-WvK">
+                                                <rect key="frame" x="250" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="zL2-7P-PE1"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="&gt;">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="nbn-ud-u8I" kind="show" id="pm9-QQ-2i5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0cc-Km-YbR"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfz-VF-T6u">
+                                        <rect key="frame" x="0.0" y="150" width="300" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGB, Datenschutz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RmP-g5-OM6">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3aN-Fi-gh3">
+                                                <rect key="frame" x="250" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="OCV-eh-Hz2"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="&gt;">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="19o-Ef-Pfh"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9iy-RH-UAX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E99-7a-MSM"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XHx-Mb-vig" firstAttribute="top" secondItem="l5k-Za-dgx" secondAttribute="bottom" constant="79" id="2qT-Eh-SUe"/>
+                            <constraint firstItem="c0B-Qz-EO9" firstAttribute="top" secondItem="zPu-72-jMS" secondAttribute="top" constant="767" id="5a7-bS-2Lm"/>
+                            <constraint firstItem="XHx-Mb-vig" firstAttribute="centerX" secondItem="c0B-Qz-EO9" secondAttribute="centerX" id="61A-b2-F5I"/>
+                            <constraint firstItem="XHx-Mb-vig" firstAttribute="centerX" secondItem="l5k-Za-dgx" secondAttribute="centerX" id="6cg-Y5-ibH"/>
+                            <constraint firstItem="E99-7a-MSM" firstAttribute="bottom" secondItem="c0B-Qz-EO9" secondAttribute="bottom" constant="2" id="BWr-PN-K6f"/>
+                            <constraint firstAttribute="bottom" secondItem="XHx-Mb-vig" secondAttribute="bottom" constant="470" id="TJX-Fu-AOe"/>
+                            <constraint firstItem="XHx-Mb-vig" firstAttribute="top" secondItem="zPu-72-jMS" secondAttribute="top" constant="182" id="WfE-aj-P9P"/>
+                            <constraint firstItem="XHx-Mb-vig" firstAttribute="centerX" secondItem="zPu-72-jMS" secondAttribute="centerX" id="dnn-hp-H3x"/>
+                            <constraint firstItem="c0B-Qz-EO9" firstAttribute="leading" secondItem="zPu-72-jMS" secondAttribute="leading" id="eZl-qd-hfk"/>
+                            <constraint firstItem="c0B-Qz-EO9" firstAttribute="leading" secondItem="l5k-Za-dgx" secondAttribute="leading" id="lBn-88-NQR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dN2-ot-a00" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4470.9923664122134" y="3.5211267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aHV-E3-NWi">
+            <objects>
+                <viewController id="nbn-ud-u8I" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VlV-AA-AT6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tabBar clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lG-lZ-EUg">
+                                <rect key="frame" x="0.0" y="767" width="393" height="33"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="" image="point_schwarz" id="u2c-dM-6NS"/>
+                                    <tabBarItem title="" image="heart_schwarz" id="5Kp-G0-BNS"/>
+                                    <tabBarItem title="" image="settings_beige" id="qi4-xv-iJm"/>
+                                </items>
+                            </tabBar>
+                            <navigationBar clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3L-ub-j7S">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yyA-CQ-OM6">
+                                <rect key="frame" x="21.666666666666657" y="182" width="350" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBj-Mi-t9x">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Katze verlässt Zuhause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZB3-MH-EXI">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaY-Da-vzF">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="50"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeP-IB-kIW">
+                                                        <rect key="frame" x="8" y="8" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="onTintColor" red="0.83809542660000003" green="0.71782392260000005" blue="0.60253405569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="70" id="0IS-7h-LlZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="wd9-hn-bqa"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Nl2-4b-8Kh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="168-Xq-Mup">
+                                        <rect key="frame" x="0.0" y="50" width="350" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Katze betritt wieder Zuhause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MV-Cf-yr9">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XgK-tl-6Yt">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="50"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-fH-Iia">
+                                                        <rect key="frame" x="8" y="8" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="onTintColor" red="0.83809542660000003" green="0.71782392260000005" blue="0.60253405569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="iPH-gp-I2U"/>
+                                                    <constraint firstAttribute="width" constant="70" id="sgq-Am-JuJ"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ak4-15-foN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZ2-qn-Bbk">
+                                        <rect key="frame" x="0.0" y="100" width="350" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPS Signal verloren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ia-Ix-hn0">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j0i-Th-aew">
+                                                <rect key="frame" x="280" y="0.0" width="70" height="50"/>
+                                                <subviews>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBS-Ff-0Ry">
+                                                        <rect key="frame" x="8" y="8" width="49" height="31"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="onTintColor" red="0.83809542660000003" green="0.71782392260000005" blue="0.60253405569999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </switch>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Nsq-aU-V35"/>
+                                                    <constraint firstAttribute="width" constant="70" id="e4x-Iv-Dz3"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Qx0-xr-OeD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="6fP-fV-MPs"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Benachrichtigungen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-gc-GWP">
+                                <rect key="frame" x="102" y="75" width="188" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Semibold" family="Kohinoor Devanagari" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LNr-Dq-TA2"/>
+                        <color key="backgroundColor" red="0.97254902119999997" green="0.97254902119999997" blue="0.97254902119999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yyA-CQ-OM6" secondAttribute="bottom" constant="470" id="1cQ-2q-gDR"/>
+                            <constraint firstItem="LNr-Dq-TA2" firstAttribute="bottom" secondItem="8lG-lZ-EUg" secondAttribute="bottom" constant="2" id="IyB-uF-UlN"/>
+                            <constraint firstItem="yyA-CQ-OM6" firstAttribute="top" secondItem="VlV-AA-AT6" secondAttribute="top" constant="182" id="KRX-hI-UZm"/>
+                            <constraint firstItem="yyA-CQ-OM6" firstAttribute="centerX" secondItem="VlV-AA-AT6" secondAttribute="centerX" id="ThT-qr-p0E"/>
+                            <constraint firstItem="yyA-CQ-OM6" firstAttribute="top" secondItem="S3L-ub-j7S" secondAttribute="bottom" constant="79" id="eM5-Cv-czb"/>
+                            <constraint firstItem="yyA-CQ-OM6" firstAttribute="centerX" secondItem="8lG-lZ-EUg" secondAttribute="centerX" id="frc-MW-qFl"/>
+                            <constraint firstItem="8lG-lZ-EUg" firstAttribute="leading" secondItem="S3L-ub-j7S" secondAttribute="leading" id="ibs-df-fVP"/>
+                            <constraint firstItem="8lG-lZ-EUg" firstAttribute="top" secondItem="VlV-AA-AT6" secondAttribute="top" constant="767" id="nEx-f8-ckg"/>
+                            <constraint firstItem="yyA-CQ-OM6" firstAttribute="centerX" secondItem="S3L-ub-j7S" secondAttribute="centerX" id="qDb-jm-Vim"/>
+                            <constraint firstItem="8lG-lZ-EUg" firstAttribute="leading" secondItem="VlV-AA-AT6" secondAttribute="leading" id="zG4-JP-7Ld"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pGq-MH-hvh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ndf-Kq-4Jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5223.6641221374048" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart_beige" width="25" height="29"/>
+        <image name="heart_schwarz" width="25" height="29"/>
+        <image name="point_beige" width="19" height="29"/>
+        <image name="point_schwarz" width="19" height="29"/>
+        <image name="settings_beige" width="30" height="32"/>
+        <image name="settings_schwarz" width="30" height="32"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
