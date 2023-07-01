@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB43613F2A50592200EDE5DB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB43613E2A50592200EDE5DB /* SettingsViewController.swift */; };
 		DB45D0522A4125F200379574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45D0512A4125F200379574 /* AppDelegate.swift */; };
 		DB45D0542A4125F200379574 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45D0532A4125F200379574 /* SceneDelegate.swift */; };
 		DB45D0562A4125F200379574 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45D0552A4125F200379574 /* ViewController.swift */; };
@@ -15,9 +16,14 @@
 		DB45D05E2A4125F600379574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB45D05C2A4125F600379574 /* LaunchScreen.storyboard */; };
 		DB45D0672A4129E300379574 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB45D0662A4129E300379574 /* Quicksand-VariableFont_wght.ttf */; };
 		DB45D06B2A4133A700379574 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB45D06A2A4133A700379574 /* MainViewController.swift */; };
+		DBA8B6A72A4F62CB00A941C6 /* NewConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA8B6A62A4F62CB00A941C6 /* NewConnectionViewController.swift */; };
+		DBD40E2C2A4F916B006799F7 /* LoadConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD40E2B2A4F916B006799F7 /* LoadConnectionViewController.swift */; };
+		DBD40E2F2A4FA640006799F7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD40E2E2A4FA640006799F7 /* MapViewController.swift */; };
+		DBD40E312A4FA7A1006799F7 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD40E302A4FA7A1006799F7 /* ActivityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB43613E2A50592200EDE5DB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DB45D04E2A4125F200379574 /* CatCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB45D0512A4125F200379574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB45D0532A4125F200379574 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +34,10 @@
 		DB45D05F2A4125F600379574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB45D0662A4129E300379574 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		DB45D06A2A4133A700379574 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DBA8B6A62A4F62CB00A941C6 /* NewConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConnectionViewController.swift; sourceTree = "<group>"; };
+		DBD40E2B2A4F916B006799F7 /* LoadConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadConnectionViewController.swift; sourceTree = "<group>"; };
+		DBD40E2E2A4FA640006799F7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DBD40E302A4FA7A1006799F7 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,22 +79,19 @@
 				DB45D05C2A4125F600379574 /* LaunchScreen.storyboard */,
 				DB45D05F2A4125F600379574 /* Info.plist */,
 				DB45D0662A4129E300379574 /* Quicksand-VariableFont_wght.ttf */,
-				DB45D0682A4129F700379574 /* Fonts */,
 			);
 			path = CatCam;
-			sourceTree = "<group>";
-		};
-		DB45D0682A4129F700379574 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		DB45D0692A41337600379574 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DBD40E2E2A4FA640006799F7 /* MapViewController.swift */,
 				DB45D06A2A4133A700379574 /* MainViewController.swift */,
+				DBA8B6A62A4F62CB00A941C6 /* NewConnectionViewController.swift */,
+				DBD40E2B2A4F916B006799F7 /* LoadConnectionViewController.swift */,
+				DBD40E302A4FA7A1006799F7 /* ActivityViewController.swift */,
+				DB43613E2A50592200EDE5DB /* SettingsViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -161,10 +168,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBD40E2C2A4F916B006799F7 /* LoadConnectionViewController.swift in Sources */,
 				DB45D0562A4125F200379574 /* ViewController.swift in Sources */,
 				DB45D0522A4125F200379574 /* AppDelegate.swift in Sources */,
+				DBD40E312A4FA7A1006799F7 /* ActivityViewController.swift in Sources */,
 				DB45D0542A4125F200379574 /* SceneDelegate.swift in Sources */,
 				DB45D06B2A4133A700379574 /* MainViewController.swift in Sources */,
+				DBA8B6A72A4F62CB00A941C6 /* NewConnectionViewController.swift in Sources */,
+				DBD40E2F2A4FA640006799F7 /* MapViewController.swift in Sources */,
+				DB43613F2A50592200EDE5DB /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
